@@ -1,0 +1,88 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>تسجيل دخول الآدمن</title>
+
+
+<style>
+
+:root {
+ 
+  --accent: #6366f1;
+ 
+}
+
+
+body{
+  font-family:Cairo;
+  background:linear-gradient(135deg,#eef2ff,#f8fafc);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.box{
+  background:#fff;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  width:300px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  background:#6366f1;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+</style>
+
+
+
+
+<a href="index.php" style="
+position:absolute;
+left:20px;
+top:20px;
+ background: var(--accent);
+color:#fff;
+padding:8px 12px;
+border-radius:10px;
+text-decoration:none;
+">
+الصفحة الرئيسية
+</a>
+</head>
+
+
+
+<body>
+
+<div class="box">
+<h2>تسجيل دخول الأدمن</h2>
+
+<form action="auth.php" method="POST">
+  <input type="email" name="email" placeholder="الإيميل" required>
+  <input type="password" name="password" placeholder="كلمة المرور" required>
+  <button type="submit">دخول</button>
+</form>
+
+</div>
+
+</body>
+</html>
