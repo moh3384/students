@@ -6,10 +6,10 @@
   <title>المتجر الإلكتروني</title>
 
   <style>
-  :root {
+ :root {
   --bg: linear-gradient(135deg, #eef2ff, #f8fafc);
   --card: #ffffff;
-  --accent: #6366f1;        
+  --accent: #6366f1;
   --accent-dark: #4f46e5;
   --text: #111827;
   --muted: #6b7280;
@@ -19,83 +19,134 @@
   --border: #e5e7eb;
 }
 
-  body {
-  margin: 0;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
   font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
   background: var(--bg);
   background-attachment: fixed;
   color: var(--text);
 }
 
-  header {
-  background: rgba(255,255,255,0.8);
+header {
+  background: rgba(255,255,255,0.9);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
-  padding: 20px 10px;
-  text-align: center;
+  padding: 16px 20px;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-  h1 {
-    margin: 0;
-    color: var(--accent);
-    font-size: 28px;
-  }
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
 
-  .search-box {
-    margin-top: 12px;
-  }
+.header-top h1 {
+  color: var(--accent);
+  font-size: 22px;
+  flex: 1;
+  text-align: center;
+}
 
-  input[type="text"] {
-    width: 80%;
-    max-width: 450px;
-    padding: 12px;
-    border-radius: var(--radius);
-    border: 1px solid #ddd;
-  }
+.login-btn {
+  background: var(--accent);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Cairo", sans-serif;
+  white-space: nowrap;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
 
-  .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
-  }
+.login-btn:hover {
+  background: var(--accent-dark);
+}
 
-  .card {
-    background: var(--card);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-  }
+.search-box {
+  text-align: center;
+}
 
-  .image-container {
-    height: 200px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
+.search-box input {
+  width: 100%;
+  max-width: 450px;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  font-family: "Cairo", sans-serif;
+  font-size: 14px;
+  outline: none;
+}
 
-  .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
 
-  .info { padding: 15px; }
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
 
-  .whatsapp-btn {
-    display: inline-block;
-    margin-top:10px;
-    background: #22c55e;
-    color: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    text-decoration: none;
-  }
+.image-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9fafb;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info {
+  padding: 16px;
+  text-align: right;
+}
+
+.info h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.info p {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 12px;
+  background: var(--whatsapp);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "Cairo", sans-serif;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #16a34a;
+}
   </style>
 </head>
 
